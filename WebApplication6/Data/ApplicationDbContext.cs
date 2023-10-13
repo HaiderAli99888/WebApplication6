@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using WebApplication6.Models;
 
 namespace WebApplication6.Data
 {
@@ -12,5 +10,8 @@ namespace WebApplication6.Data
             : base(options)
         {
         }
+
+        public DbSet<Slipper> Slippers { get; set; }
     }
 }
+
