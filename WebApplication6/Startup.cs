@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApplication6.Data;
+using WebApplication6.Models;
 
 namespace WebApplication6
 {
@@ -58,6 +59,9 @@ namespace WebApplication6
             app.UseAuthentication();
             app.UseAuthorization();
 
+            // Seed the database
+            SeedData.Initialize(app.ApplicationServices);
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -68,3 +72,4 @@ namespace WebApplication6
         }
     }
 }
+
