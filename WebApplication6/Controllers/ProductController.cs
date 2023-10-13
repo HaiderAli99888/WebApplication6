@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace WebApplication6.Controllers
 {
-    public class product : Controller
+    public class ProductController : Controller
     {
-        public IActionResult Privacy()
+      
+        public IActionResult Catalogue()
         {
             return View();
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
+
     }
 }
